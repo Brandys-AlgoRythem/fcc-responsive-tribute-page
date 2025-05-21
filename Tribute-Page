@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tribute to Rosa Parks</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main id="main">
+        <h1 id="title">Rosa Parks</h1>
+        <p class="subtitle">The Mother of the Civil Rights Movement</p>
+
+        <figure id="img-div">
+            <img id="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Rosaparks.jpg/800px-Rosaparks.jpg" alt="Rosa Parks">
+            <figcaption id="img-caption">
+                Rosa Parks on a Montgomery bus, December 21, 1956. This was the day Montgomery's public buses were legally integrated.
+            </figcaption> </figure>
+
+        <section id="tribute-info">
+            <h2>A Legacy of Courage</h2> <p>
+                Rosa Louise McCauley Parks (February 4, 1913 – October 24, 2005) was an American activist in the civil rights movement best known for her pivotal role in the Montgomery bus boycott. The United States Congress has called her "the first lady of civil rights" and "the mother of the freedom movement".
+            </p>
+            <p>
+                On December 1, 1955, in Montgomery, Alabama, Parks rejected bus driver James F. Blake's order to vacate a row of four seats in the "colored" section in favor of a white passenger, once the "white" section was filled. Parks' act of defiance and the Montgomery bus boycott became important symbols of the movement. She became an international icon of resistance to racial segregation.
+            </p>
+            <h3>Key Moments:</h3>
+            <ul>
+                <li><strong>1913:</strong> Born in Tuskegee, Alabama.</li>
+                <li><strong>1943:</strong> Joined the Montgomery chapter of the NAACP.</li>
+                <li><strong>1955:</strong> Arrested for civil disobedience, sparking the Montgomery Bus Boycott.</li>
+                <li><strong>1956:</strong> Supreme Court ruled bus segregation unconstitutional.</li>
+                <li><strong>1996:</strong> Awarded the Presidential Medal of Freedom.</li>
+                <li><strong>1999:</strong> Awarded the Congressional Gold Medal.</li>
+            </ul>
+        </section>
+
+        <div class="link-container">
+            <a id="tribute-link" href="https://en.wikipedia.org/wiki/Rosa_Parks" target="_blank">
+                Learn more about Rosa Parks on Wikipedia
+            </a>
+            </div>
+
+    </main> </body>
+</html>
+CSS
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+#main {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+#title {
+    font-size: 2.8em;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 1.1em;
+    color: #555;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+#img-div {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    /* Centering the content (like #image if it were inline-block)
+       For a block element like #image, margin: auto on #image itself is key. */
+    text-align: center; /* Helps center the caption text if it's shorter than the width */
+}
+
+#image {
+    display: block;         /* Test 16: display: block */
+    max-width: 100%;      /* Test 17: max-width: 100% */
+    height: auto;         /* Test 18: height: auto (Passed, but good to keep explicit) */
+    margin-left: auto;    /* For centering (Test 19) */
+    margin-right: auto;   /* For centering (Test 19) */
+    border-radius: 4px;
+}
+
+#img-caption {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #555;
+    text-align: center;
+}
+
+#tribute-info {
+    margin-top: 30px;
+    padding: 0 10px;
+    text-align: left;
+}
+
+#tribute-info h2 {
+    font-size: 1.7em;
+    color: #34495e;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#tribute-info h3 {
+    font-size: 1.3em;
+    color: #34495e;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#tribute-info ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+#tribute-info ul li {
+    margin-bottom: 8px;
+}
+
+.link-container {
+    text-align: center; /* This will center the inline-block <a> tag */
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #eaf2f8;
+    border-radius: 4px;
+}
+
+#tribute-link {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    /* To be centered by its parent container with text-align: center,
+       it can be inline, inline-block, or block with text-align on parent */
+}
+
+#tribute-link:hover {
+    color: #1c587a;
+    text-decoration: underline;
+}
