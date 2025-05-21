@@ -1,8 +1,6 @@
-# freeCodeCamp - Tribute Page Project
+# Responsive Tribute Page
 
-This project is a tribute page built as part of the freeCodeCamp Responsive Web Design Certification. It showcases the use of HTML5 to structure content about a chosen subject and CSS3 for styling, layout, and responsiveness.
-
-The page provides information and pays homage to its subject in a clean and readable format, designed to look good on all devices.
+This project is a webpage dedicated to a notable subject, built to showcase information in a structured and respectful manner. It utilizes HTML5 for semantic content organization and CSS3 for styling, layout, and responsive design, ensuring a good viewing experience on all devices.
 
 ## Live Demo
 
