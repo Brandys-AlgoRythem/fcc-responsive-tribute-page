@@ -1,111 +1,238 @@
-
+/* General Body and Page Layout */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Roboto', sans-serif; /* Primary Body Font */
+    background-color: #2C3E50; /* Primary Background: Dark Charcoal/Deep Navy */
+    color: #BDC3C7; /* Body Text Color: Light Gray */
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Ensures body takes full viewport height */
+    box-sizing: border-box;
 }
 
-#main {
+/* Container for main content */
+.container {
     max-width: 800px;
-    margin: 30px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 90%;
+    margin: 40px auto;
+    background-color: #34495E; /* Slightly lighter background for the main container */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-#title {
-    font-size: 2.8em;
-    color: #2c3e50;
+.container:hover {
+    transform: translateY(-5px); /* Subtle lift on hover */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+/* Headings */
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif; /* Heading Font */
+    color: #ECF0F1; /* Headings Color: Very Light Gray / Off-White */
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 600;
     text-align: center;
+}
+
+h1#title {
+    font-size: 2.8em;
     margin-bottom: 5px;
 }
 
 .subtitle {
     font-size: 1.1em;
-    color: #555;
+    color: #BDC3C7; /* Subtitle color */
     text-align: center;
     margin-top: 0;
     margin-bottom: 25px;
 }
 
+h2 {
+    font-size: 1.7em;
+    color: #ECF0F1;
+    text-align: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #4A6278; /* Subtle separator */
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.3em;
+    color: #1ABC9C; /* Accent color for sub-headings like "Key Moments" */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: left; /* Keep alignment for lists */
+}
+
+/* Image Div and Image Styling */
 #img-div {
-    background-color: #f9f9f9;
-    padding: 10px;
-    margin: 20px 0;
-    border: 1px solid #eee;
-    border-radius: 4px;
-    /* Centering the content (like #image if it were inline-block)
-       For a block element like #image, margin: auto on #image itself is key. */
-    text-align: center; /* Helps center the caption text if it's shorter than the width */
+    background-color: #2F4050; /* Slightly different shade for image background */
+    padding: 15px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+#img-div:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 #image {
-    display: block;         /* Test 16: display: block */
-    max-width: 100%;      /* Test 17: max-width: 100% */
-    height: auto;         /* Test 18: height: auto (Passed, but good to keep explicit) */
-    margin-left: auto;    /* For centering (Test 19) */
-    margin-right: auto;   /* For centering (Test 19) */
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto; /* Center image */
     border-radius: 4px;
+    transition: transform 0.3s ease-in-out; /* Smooth scale on hover */
+}
+
+#image:hover {
+    transform: scale(1.02); /* Subtle zoom effect */
 }
 
 #img-caption {
-    margin-top: 10px;
-    font-size: 0.9em;
-    color: #555;
+    margin-top: 15px;
+    font-size: 0.95em;
+    color: #BDC3C7;
     text-align: center;
 }
 
+/* Tribute Info Section */
 #tribute-info {
     margin-top: 30px;
     padding: 0 10px;
     text-align: left;
 }
 
-#tribute-info h2 {
-    font-size: 1.7em;
-    color: #34495e;
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-#tribute-info h3 {
-    font-size: 1.3em;
-    color: #34495e;
-    margin-top: 20px;
-    margin-bottom: 10px;
+#tribute-info p {
+    margin-bottom: 1em;
+    color: #BDC3C7;
 }
 
 #tribute-info ul {
-    list-style-position: inside;
+    list-style: none; /* Remove default bullet points */
     padding-left: 0;
+    margin-bottom: 1.5em;
 }
 
 #tribute-info ul li {
-    margin-bottom: 8px;
+    position: relative;
+    padding-left: 25px; /* Space for custom bullet */
+    margin-bottom: 0.8em;
+    font-size: 0.95em;
 }
 
+#tribute-info ul li::before {
+    content: '•'; /* Custom bullet point */
+    color: #1ABC9C; /* Accent color for bullets */
+    position: absolute;
+    left: 0;
+    font-size: 1.2em;
+    line-height: 1;
+}
+
+/* Link Container and Link Styling */
 .link-container {
-    text-align: center; /* This will center the inline-block <a> tag */
+    text-align: center;
     margin-top: 30px;
-    padding: 15px;
-    background-color: #eaf2f8;
-    border-radius: 4px;
+    padding: 20px;
+    background-color: #2F4050; /* Slightly different shade for link container */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.link-container:hover {
+    background-color: #22303E; /* Darker on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 #tribute-link {
-    color: #2980b9;
+    color: #1ABC9C; /* Accent color for link */
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1em;
-    /* To be centered by its parent container with text-align: center,
-       it can be inline, inline-block, or block with text-align on parent */
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
 
 #tribute-link:hover {
-    color: #1c587a;
-    text-decoration: underline;
+    color: #FFD700; /* Gold on hover */
+    text-decoration: none;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.5); /* Soft shadow for glow */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 0.85em;
+    color: #BDC3C7;
+    margin-top: 30px; /* Space above footer */
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px auto;
+        padding: 25px;
+    }
+
+    h1#title {
+        font-size: 2.2em;
+    }
+
+    .subtitle {
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    h1#title {
+        font-size: 1.8em;
+    }
+
+    .subtitle {
+        font-size: 0.9em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    h3 {
+        font-size: 1.1em;
+    }
+
+    #img-div {
+        padding: 10px;
+    }
+
+    #img-caption {
+        font-size: 0.8em;
+    }
+
+    #tribute-link {
+        font-size: 1em;
+    }
 }
